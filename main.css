@@ -1,0 +1,87 @@
+
+
+/* CSS variables */
+:root {
+  --black: rgb(0, 255, 38);
+  --white: rgb(0, 255, 76);
+  --off-white: rgb(0, 255, 128);
+  --primary-color: rgb(255, 34, 0);
+  --primary-color-light: rgb(0, 218, 149);
+  --primary-color-bright: rgb(0, 163, 24);
+  --primary-color-dark: rgb(0, 184, 108);
+
+  --headline-color: var(--primary-color):
+}
+
+/* Box Model Reset: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Your styles go below */
+/* Default styles apply to screens less than 600px wide */
+body {
+  background-color: var(--off-white);
+  color: var(--primary-color-dark);
+  font-family: 'Comic Neue', sans-serif;
+}
+
+h1, h2, h3 {
+  color: var(--headline-color);
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+a:hover {
+  background-color: var(--primary-color-light);
+  color: var(--primary-color-dark);
+}
+/* applies to all <section> elements*/
+section {
+  padding-top: 40px;
+  padding-bottom: 40px; 
+  color: rgb(5, 64, 116);
+}
+
+.header {
+  background-blend-mode: multiply;
+  background-image: url("../img/i-feel-like-this-bunch-would-appreciate-froyd-v0-do5c3q8rp5yf1.jpg");
+  background-size: cover;
+  font-size: 50px;
+}
+/*applies to anything with class="center */
+.center {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto 30px 10rem;
+}
+
+.intro {
+background-color: blueviolet;
+}
+/*applies to anything with class="center */
+.center {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto auto 30px 10rem;
+}
+
+/* Styles for screens above or equal to 600px wide */
+@media (width >= 600px) {
+  body {
+    background-color: var(--primary-color);
+    color: var(--off-white);
+  }
+
+  
+
+  h1, h2, h3 {
+    color: var(--white);
+  }  
+}
