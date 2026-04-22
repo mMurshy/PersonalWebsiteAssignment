@@ -1,1 +1,0 @@
-alert("Very Yummy Cookies!");

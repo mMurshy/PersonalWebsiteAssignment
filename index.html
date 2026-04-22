@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script scr="script.js" defer></script>
     <title>My Very Evil Webpage</title>
     <!-- Custom fonts go here -->
 
@@ -11,34 +12,48 @@
     <link href="css/main.css" rel="stylesheet">
   </head>
   <body>
-
-<section class="header">
-  <div class="center">
-    <div class="center">
-      <p></p>Ice cream cookie</p>
+    <div class="container">
+      <section class="tools-board">
+      
+          <div class="row">
+          <label class="title">Options</label>
+          <ul class="options">
+            <li class="option active">
+              <img src="icons/brush.svg" alt="">
+              <span>Brush</span>
+            </li>
+             <li class="option">
+           <input type="range" id="size-slider" min="1" max="30" value="5">
+            </li>
+          </ul>
+   </div>
+         <div class="row colors">
+          <label class="title">Colors</label>
+          <ul class="options">
+          <li class="option"></li>
+          <li class="option selected"></li>
+          <li class="option"></li>
+          <li class="option"></li>
+          <li class="option"></li>
+          <li class="option"></li>
+          <li class="option"></li>
+          <li class="option"></li>
+          <li class="option"></li>
+          <li class="option"></li>
+          <li class="option"></li>
+          <li class="option">
+          <input type="color" id="color-picker" value="#853e81">
+          </li>
+        </ul>
+   </div>
+    <div class="row buttons">
+      <button class="clear-canvas">Clear Canvas</button>
     </div>
-  </div>
-</section>
-
-<section class="intro">
-  <div class="center">
-    <div class="center">
-      <p>My Ice cream is ready!</p>
+    </section>
+    <section class="drawing-board">
+      <canvas></canvas>
+    </section>
     </div>
-  </div>
-</section>
 
-
-
-    <h1>Does Anyone Else Smell Burning!</h1>
-    <img src="img/mmxiagaqoia61.png">
-    <h2>My Ice cream is ready!.</h2>
-    <p> Thats great cause I'm so <a href="https://en.wikipedia.org/wiki/Hunger">hungry.</a>Would anyone like a bite?</p>
-    
-    <h2>I Don't mind sharing</h2>
-    <p>Please! have a Bite.</p>
-
-    <!-- All JS goes at the end of the <body> element -->
-    <script src="js/main.js"></script>
   </body>
 </html>
