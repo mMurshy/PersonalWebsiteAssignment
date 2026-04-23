@@ -15,42 +15,44 @@
     <div class="container">
       <section class="tools-board">
       
-          <div class="row">
-          <label class="title">Options</label>
+      
+         <div class="row colors">
+          <label hidden class="title">Colors</label>
+          <ul class="options">
+          <li class="option"></li>
+          <li class="option"></li>
+          <li class="option"></li>
+          <li class="option"></li>
+          <li class="option"></li>
+          <li class="option"></li>
+          <li class="option"></li>
+          <li class="option"></li>
+          <li class="option"></li>
+          <li class="option"></li>
+          <li class="option selected"></li>
+          <li class="option">
+          <input type="color" id="color-picker" value="#853e81">
+          </li>
+        </ul>
+        
+   </div>
+    <div class="row">
+          <label hidden class="title">Options</label>
           <ul class="options">
             <li class="option active">
-              <img src="icons/brush.svg" alt="">
-              <span>Brush</span>
+      
+              <span hidden>Brush</span>
             </li>
              <li class="option">
            <input type="range" id="size-slider" min="1" max="30" value="5">
             </li>
           </ul>
    </div>
-         <div class="row colors">
-          <label class="title">Colors</label>
-          <ul class="options">
-          <li class="option"></li>
-          <li class="option selected"></li>
-          <li class="option"></li>
-          <li class="option"></li>
-          <li class="option"></li>
-          <li class="option"></li>
-          <li class="option"></li>
-          <li class="option"></li>
-          <li class="option"></li>
-          <li class="option"></li>
-          <li class="option"></li>
-          <li class="option">
-          <input type="color" id="color-picker" value="#853e81">
-          </li>
-        </ul>
-   </div>
     <div class="row buttons">
       <button class="clear-canvas">Clear Canvas</button>
     </div>
     </section>
-    <section class="drawing-board">
+    <section class="drawing-board"><p>LUNULA</p>
       <canvas></canvas>
     </section>
     </div>

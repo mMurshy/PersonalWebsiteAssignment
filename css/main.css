@@ -1,14 +1,14 @@
 /* Custom fonts and other imports go first */
-@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Creepster&display=swap");
+@import url('link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet');
 /* CSS variables */
 :root {
-  --black: rgb(0, 255, 38);
-  --white: rgb(0, 255, 76);
-  --off-white: rgb(0, 255, 128);
-  --primary-color: rgb(102, 201, 176);
-  --primary-color-light: rgb(0, 218, 149);
-  --primary-color-bright: rgb(0, 163, 24);
-  --primary-color-dark: rgb(0, 184, 108);
+  --black: rgb(38, 0, 255);
+  --white: rgb(237, 239, 248);
+  --off-white: rgb(0, 4, 255);
+  --primary-color: rgb(102, 104, 201);
+  --primary-color-light: rgb(80, 94, 216);
+  --primary-color-bright: rgb(79, 68, 238);
+  --primary-color-dark: rgb(0, 18, 184);
   --headline-color: var(--primary-color): ;
 }
 
@@ -28,7 +28,7 @@ body {
   padding: 0;
   background-color: var(--off-white);
   color: var(--primary-color-dark);
-  font-family: "Comic Neue", sans-serif;
+  font-family: normal;
 }
 
 body {
@@ -48,7 +48,7 @@ body {
 }
 
 section {
-  background: #fff;
+  background: #edeff8;
   border-radius: 7px;
 }
 
@@ -91,6 +91,7 @@ section {
   width: 100%;
   height: 5px;
   margin-top: 10px;
+  margin-right: 20%;
 }
 
 .colors .option {
@@ -101,62 +102,62 @@ section {
 }
 
 .colors .option:nth-child(1) {
-  background-color: #aaaaaa;
+  background-color: #edeff8;
   border: 1px solid #2a1111;
 }
 
 .colors .option:nth-child(2) {
-  background-color: #ff4343;
+  background-color: #B9BFE3;
   border: 1px solid #2a1111;
 }
 
 .colors .option:nth-child(3) {
-  background-color: #57d734;
+  background-color: #949DD4;
   border: 1px solid #2a1111;
 }
 
 .colors .option:nth-child(4) {
-  background-color: #1a8497;
+  background-color: #717DC6;
   border: 1px solid #2a1111;
 }
 
 .colors .option:nth-child(5) {
-  background-color: #a72ba0;
+  background-color: #5462BA;
   border: 1px solid #2a1111;
 }
 
 .colors .option:nth-child(6) {
-  background-color: rgba(167, 115, 43, 0.8352941176);
+  background-color: #3E4CA5;
   border: 1px solid #2a1111;
 }
 
 .colors .option:nth-child(7) {
-  background-color: #aaaaaa;
+  background-color: #2A3891;
   border: 1px solid #2a1111;
 }
 
 .colors .option:nth-child(8) {
-  background-color: #ff4343;
+  background-color: #1B2982;
   border: 1px solid #2a1111;
 }
 
 .colors .option:nth-child(9) {
-  background-color: #57d734;
+  background-color: #0C1659;
   border: 1px solid #2a1111;
 }
 
 .colors .option:nth-child(10) {
-  background-color: #1a8497;
+  background-color: #060c35;
   border: 1px solid #2a1111;
 }
 
 .colors .option:nth-child(11) {
-  background-color: #a72ba0;
+  background-color: #020618;
   border: 1px solid #2a1111;
 }
 
 .colors .option:nth-child(12) {
-  background-color: rgba(167, 115, 43, 0.8352941176);
+  background-color: rgb(133, 62, 129);
   border: 1px solid #2a1111;
 }
 
@@ -169,12 +170,12 @@ section {
   width: 15px;
   background: inherit;
   border-radius: inherit;
-  border: 2px solid #ffffff;
+  border: 2px solid #edeff8;
   transform: translate(-50%, -50%);
 }
 
 .colors .option:first-child.selected::before {
-  border-color: #fff;
+  border-color: #111111;
 }
 
 .option #color-picker {
@@ -194,13 +195,11 @@ section {
   border-radius: 5px;
   cursor: pointer;
 }
-
 .buttons .clear-canvas {
   color: var(--black);
   border: 1px solid var(--black);
 }
-
-.clear-canvas:hover {
+.buttons .clear-canvas:hover {
   background-color: var(--off-white);
   border: 1px solid --black;
   transition: all 0.3s ease;
@@ -208,9 +207,26 @@ section {
 
 .drawing-board {
   flex: 1;
+  position: relative;
 }
-
-.drawing-board canvas {
+.drawing-board p {
+  font-size: 180px;
+  color: rgba(124, 133, 209, 0.3254901961);
+  transform: scaleY(60%);
+  text-align: start;
+  pointer-events: none;
+  position: absolute;
+  top: -0.2em;
+  left: 0;
   width: 100%;
+  z-index: 0;
+  text-align: center;
+  margin: 0;
+  line-height: 1;
+}
+.drawing-board canvas {
   height: 100%;
+  width: 100%;
+  border: 3px solid #76798b;
+  border: 3px solid #2b2f44;
 }/*# sourceMappingURL=main.css.map */
