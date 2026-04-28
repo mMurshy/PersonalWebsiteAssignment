@@ -54,14 +54,18 @@ body {
 }
 
 section {
-  background: #edeff8;
+  background: var(--white);
   border-radius: 0px;
   box-shadow: 14px 8px 14px 1px rgba(12, 22, 89, 0.3);
+  
+  
 }
 
 .tools-board {
   width: 210px;
   padding: 15px, 22px, 0;
+  background-color: var(--off-white);
+  
 }
 
 .tools-board .row {
@@ -110,73 +114,121 @@ section {
 
 .colors .option:nth-child(1) {
   background-color: #edeff8;
-  border: 1px solid #2a1111;
+  background-image: url(../Icons/button.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
   box-shadow: 2px 2px 2px 1px rgba(12, 22, 89, 0.3);
 }
 
 .colors .option:nth-child(2) {
   background-color: #B9BFE3;
-  border: 1px solid #2a1111;
+  background-image: url(../Icons/button.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
   box-shadow: 2px 2px 2px 1px rgba(12, 22, 89, 0.3);
 }
 
 .colors .option:nth-child(3) {
   background-color: #949DD4;
-  border: 1px solid #2a1111;
+  background-image: url(../Icons/button.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
   box-shadow: 2px 2px 2px 1px rgba(12, 22, 89, 0.3);
 }
 
 .colors .option:nth-child(4) {
   background-color: #717DC6;
-  border: 1px solid #2a1111;
+  background-image: url(../Icons/button.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
   box-shadow: 2px 2px 2px 1px rgba(12, 22, 89, 0.3);
 }
 
 .colors .option:nth-child(5) {
   background-color: #5462BA;
-  border: 1px solid #2a1111;
+  background-image: url(../Icons/button.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
   box-shadow: 2px 2px 2px 1px rgba(12, 22, 89, 0.3);
 }
 
 .colors .option:nth-child(6) {
   background-color: #3E4CA5;
-  border: 1px solid #2a1111;
+  background-image: url(../Icons/button.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
   box-shadow: 2px 2px 2px 1px rgba(12, 22, 89, 0.3);
 }
 
 .colors .option:nth-child(7) {
   background-color: #2A3891;
-  border: 1px solid #2a1111;
+  background-image: url(../Icons/button.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
   box-shadow: 2px 2px 2px 1px rgba(12, 22, 89, 0.3);
 }
 
 .colors .option:nth-child(8) {
   background-color: #1B2982;
-  border: 1px solid #2a1111;
+  background-image: url(../Icons/button.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
   box-shadow: 2px 2px 2px 1px rgba(12, 22, 89, 0.3);
 }
 
 .colors .option:nth-child(9) {
   background-color: #0C1659;
-  border: 1px solid #2a1111;
+  background-image: url(../Icons/button.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
   box-shadow: 2px 2px 2px 1px rgba(12, 22, 89, 0.3);
 }
 
 .colors .option:nth-child(10) {
   background-color: #060c35;
-  border: 1px solid #2a1111;
+  background-image: url(../Icons/button.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
   box-shadow: 2px 2px 2px 1px rgba(12, 22, 89, 0.3);
 }
 
 .colors .option:nth-child(11) {
   background-color: #020618;
-  border: 1px solid #2a1111;
+  background-image: url(../Icons/button.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
   box-shadow: 2px 2px 2px 1px rgba(12, 22, 89, 0.3);
 }
 
 .colors .option:nth-child(12) {
   background-color: rgb(133, 62, 62);
-  border: 1px solid #2a1111;
+  background-image: url(../Icons/rainbowbutton.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
   box-shadow: 2px 2px 2px 1px rgba(12, 22, 89, 0.3);
 }
 
@@ -185,16 +237,12 @@ section {
   content: "";
   top: 50%;
   left: 50%;
-  height: 15px;
-  width: 15px;
+  height: 42px;
+  width: 42px;
   background: inherit;
   border-radius: inherit;
-  border: 2px solid #edeff8;
+  border: 3px solid #edeff8;
   transform: translate(-50%, -50%);
-}
-
-.colors .option:first-child.selected::before {
-  border-color: #111111;
 }
 
 .option #color-picker {
@@ -222,6 +270,7 @@ section {
   background-color: var(--off-white);
   border: 1px solid --black;
   transition: all 0.3s ease;
+  
 }
 
 .drawing-board {
@@ -242,8 +291,10 @@ section {
   text-align: center;
   margin: 0;
   line-height: 1;
+  
 }
 .drawing-board canvas {
   height: 100%;
   width: 100%;
+
 }/*# sourceMappingURL=main.css.map */
