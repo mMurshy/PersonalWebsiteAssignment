@@ -3,13 +3,13 @@
 
 /* CSS variables */
 :root {
-  --black: rgb(38, 0, 255);
-  --white: rgb(237, 239, 248);
-  --off-white: rgb(0, 4, 255);
-  --primary-color: rgb(102, 104, 201);
-  --primary-color-light: rgb(80, 94, 216);
-  --primary-color-bright: rgb(79, 68, 238);
-  --primary-color-dark: rgb(0, 18, 184);
+  --black: #020618;
+  --white: #edeff8;
+  --off-white: #3E4CA5;
+  --primary-color: #6668c9;
+  --primary-color-dark: #5462BA;
+  --primary-color-light: #2A3891;
+  --primary-color-bright: rgb(12, 22, 89);
 
   --headline-color: var(--primary-color):
 }
@@ -22,24 +22,35 @@ html {
   box-sizing: border-box;
 }
 
+
 /* Your styles go below */
 /* Default styles apply to screens less tn 600px wide */
+
+.topbar {
+    background-color: var(--white);
+    color: var(--primary-color-bright);
+    background-size: 330px;
+      padding-left: 50px;
+    transform: scaleX(150%);
+    margin-right: 30px;
+    box-shadow: 14px 8px 14px 1px rgb(12 22 89 / 0.7);
+
+}
+
 body {
-    margin: 0;
-    padding: 0;
+
   background-color: var(--off-white);
   color: var(--primary-color-dark);
   font-family: normal;
 }
+
 body{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
     background-color: var(--primary-color);
+    padding-left: 250px;
 }
 .container{
     display: flex;
+    justify-content: center;
     width: 100%;
     gap: 10px;
     padding: 10px;
@@ -47,7 +58,8 @@ body{
 }
 section{
     background: #edeff8;
-    border-radius: 7px;
+    border-radius: 0px;
+    box-shadow: 14px 8px 14px 1px rgb(12 22 89 / 0.3);
 }
 .tools-board{
     width: 210px;
@@ -94,50 +106,62 @@ section{
 .colors .option:nth-child(1){
     background-color: #edeff8;
     border: 1px solid #2a1111;
+     box-shadow: 2px 2px 2px 1px rgb(12 22 89 / 0.3);
 }
 .colors .option:nth-child(2){
     background-color: #B9BFE3;
     border: 1px solid #2a1111;
+     box-shadow: 2px 2px 2px 1px rgb(12 22 89 / 0.3);
 }
 .colors .option:nth-child(3){
     background-color: #949DD4;
     border: 1px solid #2a1111;
+     box-shadow: 2px 2px 2px 1px rgb(12 22 89 / 0.3);
 }
 .colors .option:nth-child(4){
     background-color: #717DC6;
     border: 1px solid #2a1111;
+     box-shadow: 2px 2px 2px 1px rgb(12 22 89 / 0.3);
 }
 .colors .option:nth-child(5){
     background-color: #5462BA;
     border: 1px solid #2a1111;
+     box-shadow: 2px 2px 2px 1px rgb(12 22 89 / 0.3);
 }
 .colors .option:nth-child(6){
     background-color: #3E4CA5;
     border: 1px solid #2a1111;
+     box-shadow: 2px 2px 2px 1px rgb(12 22 89 / 0.3);
 }
 .colors .option:nth-child(7){
    background-color: #2A3891;
     border: 1px solid #2a1111;
+     box-shadow: 2px 2px 2px 1px rgb(12 22 89 / 0.3);
 }
 .colors .option:nth-child(8){
     background-color: #1B2982;
     border: 1px solid #2a1111;
+     box-shadow: 2px 2px 2px 1px rgb(12 22 89 / 0.3);
 }
 .colors .option:nth-child(9){
     background-color: #0C1659;
     border: 1px solid #2a1111;
+     box-shadow: 2px 2px 2px 1px rgb(12 22 89 / 0.3);
 }
 .colors .option:nth-child(10){
     background-color: #060c35;
     border: 1px solid #2a1111;
+     box-shadow: 2px 2px 2px 1px rgb(12 22 89 / 0.3);
 }
 .colors .option:nth-child(11){
     background-color: #020618;
     border: 1px solid #2a1111;
+     box-shadow: 2px 2px 2px 1px rgb(12 22 89 / 0.3);
 }
 .colors .option:nth-child(12){
-    background-color: rgb(133, 62, 129);
+    background-color: rgb(133, 62, 62);
     border: 1px solid #2a1111;
+     box-shadow: 2px 2px 2px 1px rgb(12 22 89 / 0.3);
 }
 .colors .option.selected::before{
     position: absolute;
@@ -198,7 +222,7 @@ border-color: #111111;
         position: absolute;
         top: -0.2em;
         left: 0;
-        width: 100%;
+        width: 70%;
         z-index: 0;
         text-align: center;
         margin: 0;
@@ -208,7 +232,6 @@ border-color: #111111;
     canvas{
         height: 100%;
         width: 100%;
-        border: 3px solid #76798b;
-        border: 3px solid #2b2f44;
+
     }
 }
