@@ -30,23 +30,20 @@ html {
     background-color: var(--white);
     color: var(--primary-color-bright);
     background-size: 330px;
-      padding-left: 50px;
-    transform: scaleX(150%);
-    margin-right: 30px;
+    padding-left: 50px;
+    transform: scaleY(33%);
+    padding-right: 30px;
     box-shadow: 14px 8px 14px 1px rgb(12 22 89 / 0.7);
 
-}
-
-body {
-
-  background-color: var(--off-white);
-  color: var(--primary-color-dark);
-  font-family: normal;
+    h1 {
+        font-size: 4vw;
+    }
 }
 
 body{
     background-color: var(--primary-color);
-    padding-left: 250px;
+    color: var(--primary-color-dark);
+    font-family: normal;
 }
 .container{
     display: flex;
@@ -54,6 +51,7 @@ body{
     width: 100%;
     gap: 10px;
     padding: 10px;
+    margin-left: 250px;
     max-width: 1050px;
 }
 section{
@@ -70,13 +68,16 @@ section{
 }
 .row .options{
     list-style: none;
-    margin: 10px, 0, 0, 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    margin: 0;
 }
 .row .options .option{
     display: flex;
     cursor: pointer;
     align-items: center;
-    margin-bottom: 10px;
 }
 .option:is(:hover, .active) img{
     filter: invert(17%) sepia(600%) saturate(3000%) hue-rotate(900deg) brightness(100%) contrast(100%);
@@ -96,129 +97,63 @@ section{
     margin-right: 20%;
 }
 
-.colors .option{
-    height: 20px;
-    width: 20px;
-    margin-top: 3px;
+.colors .option {
+    background-image: url(../Icons/button.png);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 2px 2px 2px 1px rgb(12 22 89 / 0.3);
+    width: 100%;
+    aspect-ratio: 1/1;
+    margin: 0;
     position: relative;
    
 }
 .colors .option:nth-child(1){
    background-color: #edeff8;
-     background-image: url(../Icons/button.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 40px;
-    width: 40px;
-    box-shadow: 2px 2px 2px 1px rgb(12 22 89 / 0.3);
 }
 .colors .option:nth-child(2){
     background-color: #B9BFE3;
-   background-image: url(../Icons/button.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 40px;
-    width: 40px;
-    box-shadow: 2px 2px 2px 1px rgb(12 22 89 / 0.3);
 }
 .colors .option:nth-child(3){
     background-color: #949DD4;
-     background-image: url(../Icons/button.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 40px;
-    width: 40px;
-    box-shadow: 2px 2px 2px 1px rgb(12 22 89 / 0.3);
 }
 .colors .option:nth-child(4){
     background-color: #717DC6;
-     background-image: url(../Icons/button.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 40px;
-    width: 40px;
-    box-shadow: 2px 2px 2px 1px rgb(12 22 89 / 0.3);
 }
 .colors .option:nth-child(5){
     background-color: #5462BA;
- background-image: url(../Icons/button.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 40px;
-    width: 40px;
-    box-shadow: 2px 2px 2px 1px rgb(12 22 89 / 0.3);
 }
 .colors .option:nth-child(6){
     background-color: #3E4CA5;
-    background-image: url(../Icons/button.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 40px;
-    width: 40px;
-    box-shadow: 2px 2px 2px 1px rgb(12 22 89 / 0.3);
 }
 .colors .option:nth-child(7){
    background-color: #2A3891;
- background-image: url(../Icons/button.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 40px;
-    width: 40px;
-    box-shadow: 2px 2px 2px 1px rgb(12 22 89 / 0.3);
 }
 .colors .option:nth-child(8){
     background-color: #1B2982;
-   background-image: url(../Icons/button.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 40px;
-    width: 40px;
-    box-shadow: 2px 2px 2px 1px rgb(12 22 89 / 0.3);
 }
 .colors .option:nth-child(9){
     background-color: #0C1659;
-   background-image: url(../Icons/button.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 40px;
-    width: 40px;
-    box-shadow: 2px 2px 2px 1px rgb(12 22 89 / 0.3);
 }
 .colors .option:nth-child(10){
     background-color: #060c35;
- background-image: url(../Icons/button.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 40px;
-    width: 40px;
-    box-shadow: 2px 2px 2px 1px rgb(12 22 89 / 0.3);
 }
 .colors .option:nth-child(11){
     background-color: #020618;
- background-image: url(../Icons/button.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 40px;
-    width: 40px;
-    box-shadow: 2px 2px 2px 1px rgb(12 22 89 / 0.3);
 }
 .colors .option:nth-child(12){
+    background-image: url(../Icons/rainbowbutton.png);
     background-color: rgb(133, 62, 62);
- background-image: url(../Icons/button.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 40px;
-    width: 40px;
-    box-shadow: 2px 2px 2px 1px rgb(12 22 89 / 0.3);
 }
 .colors .option.selected::before{
     position: absolute;
     content: "";
     top: 50%;
     left: 50%;
-    height: 42px;
-    width: 42px;
-    background: inherit;
+    height: 100%;
+    width: 100%;
+    // background: inherit;
     border-radius: inherit;
     border: 3px solid #edeff8;
     transform: translate(-50%, -50%);
