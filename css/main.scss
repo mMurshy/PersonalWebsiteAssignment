@@ -5,11 +5,12 @@
 :root {
   --black: #020618;
   --white: #edeff8;
+  --footer-color: #949DD4;
   --off-white: #3E4CA5;
   --primary-color: #6668c9;
   --primary-color-dark: #5462BA;
   --primary-color-light: #2A3891;
-  --primary-color-bright: rgb(12, 22, 89);
+  --primary-color-bright: #0c1659;
 
   --headline-color: var(--primary-color):
 }
@@ -30,15 +31,34 @@ html {
     background-color: var(--white);
     color: var(--primary-color-bright);
     background-size: 330px;
-    padding-left: 50px;
+    padding-left: 66px;
     transform: scaleY(33%);
     padding-right: 30px;
-    box-shadow: 14px 8px 14px 1px rgb(12 22 89 / 0.7);
+    box-shadow: 3px 8px 13px 1px #0c1659;
+    background-image: url(../Icons/haresstampblue.png);
+    background-repeat: no-repeat;
+    background-size: contain;
 
     h1 {
         font-size: 4vw;
     }
 }
+
+   .footer{
+     list-style: none;
+     font-size: 30px;
+      justify-content: center;
+    background-color: var(--footer-color);
+    background-size: 1310px;
+    background-image: url(../Icons/pots.png);
+    background-repeat: no-repeat;
+    background-position: 450px;
+    color: var(--white);
+    width: 100%;
+    gap: 10px;
+    padding: 10px;
+    
+    }
 
 body{
     background-color: var(--primary-color);
@@ -49,28 +69,24 @@ body{
     display: flex;
     justify-content: center;
     width: 100%;
-    gap: 10px;
     padding: 10px;
-    margin-left: 250px;
     max-width: 1050px;
 }
 section{
-    background: #edeff8;
+    background: var(--primary-color-bright);
     border-radius: 0px;
     box-shadow: 14px 8px 14px 1px rgb(12 22 89 / 0.3);
+    margin-top: -40px;
 }
 .tools-board{
     width: 210px;
-    padding: 15px, 22px, 0;
+    background: #5462BA;
 }
-.tools-board .row{
-    margin-bottom: 20px;
-}
+
 .row .options{
     list-style: none;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
     padding: 20px;
     margin: 0;
 }
@@ -91,10 +107,12 @@ section{
     color: var(--primary-color-bright);
 }
 .option #size-slider{
-    width: 100%;
-    height: 5px;
-    margin-top: 10px;
-    margin-right: 20%;
+    position: relative;
+     box-shadow: 2px 2px 2px 1px rgb(12 22 89 / 0.3);
+     margin-top: -40px;
+   
+    
+     
 }
 
 .colors .option {
@@ -153,7 +171,6 @@ section{
     left: 50%;
     height: 100%;
     width: 100%;
-    // background: inherit;
     border-radius: inherit;
     border: 3px solid #edeff8;
     transform: translate(-50%, -50%);
@@ -168,15 +185,14 @@ border-color: #111111;
 .buttons {
 
     button {
-        width: 100%;
+        width: 70%;
         color: #fff;
         border: none;
         outline: none;
-        padding: 11px 0;
+        padding: 10px 0;
         font-size: 0.9rem;
-        margin-bottom: 13px;
         background: none;
-        border-radius: 5px;
+        margin-left: 30px;
         cursor: pointer;
     }
 
@@ -198,13 +214,30 @@ border-color: #111111;
 
     p {
         font-size: 180px;
-        color: #7c85d153;
-        transform: scaleY(60%);
+        color: var(--white);
+        transform: scaleY(80%);
+        text-shadow: 4px 4px 3px var(--black);
         text-align: start;
         pointer-events: none;
         position: absolute;
-        top: -0.2em;
-        left: 0;
+        top: -30px;
+        left: 4px;
+        width: 70%;
+        z-index: 0;
+        text-align: center;
+        margin: 0;
+        line-height: 1;
+    } 
+  p2 {
+        font-size: 50px;
+        color: var(--white);
+        transform: scaleY(80%);
+        text-shadow: 4px 4px 3px var(--black);
+        text-align: end;
+        pointer-events: none;
+        position: absolute;
+        top: 11%;
+        left: 59%;
         width: 70%;
         z-index: 0;
         text-align: center;
