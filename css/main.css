@@ -78,7 +78,7 @@ section {
 
 .tools-board {
   width: 210px;
-  background: #5462BA;
+  background: var(--primary-color-dark);
 }
 
 .row .options {
