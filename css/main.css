@@ -28,8 +28,8 @@ html {
   background-color: var(--white);
   color: var(--primary-color-bright);
   background-size: 330px;
-  padding-left: 66px;
-  transform: scaleY(40%);
+  padding-left: 25px;
+  transform: scaleY(70%);
   padding-right: 30px;
   box-shadow: 3px 8px 13px 1px #0c1659;
   background-image: url(../Icons/haresstampblue.png);
@@ -45,11 +45,12 @@ html {
   list-style: none;
   font-size: 30px;
   justify-content: center;
-  background-color: var(--footer-color);
+  background-color: var(--primary-color-light);
   background-size: 1310px;
-  background-image: url(../Icons/pots.png);
+  background-image: url(../Icons/pots.png), url(../Icons/gridbackground.png);
   background-repeat: no-repeat;
-  background-position: 450px;
+  background-size: 100%;
+  background-position: 0px -20px;
   color: var(--white);
   width: 100%;
   gap: 10px;
@@ -57,8 +58,8 @@ html {
 }
 
 body {
-  background-color: var(--primary-color);
-  color: var(--primary-color-dark);
+  background-image: url(../Icons/gridbackground.png);
+  background-size: 100% 100%;
   font-family: normal;
 }
 
@@ -80,7 +81,11 @@ section {
 .tools-board {
   width: 210px;
   background: var(--primary-color-dark);
-  background-image: linear-gradient(to bottom, var(--primary-color-light), var(--footer-color));
+  background-image: linear-gradient(to bottom, var(--primary-color-bright), #5863a8);
+  border: 10px solid var(--black);
+  -o-border-image: url(../Icons/canvasbox.png) 1% round;
+     border-image: url(../Icons/canvasbox.png) 1% round;
+  box-shadow: var(--primary-color-bright) 0px 4px 30px -12px inset, var(--primary-color-bright) 0px 12px 36px -18px inset;
 }
 
 .row .options {
@@ -88,7 +93,7 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 20px;
-  margin: 0;
+  margin: 0px;
 }
 
 .row .options .option {
@@ -113,8 +118,11 @@ section {
 
 .option #size-slider {
   position: relative;
-  box-shadow: 2px 2px 2px 1px rgba(12, 22, 89, 0.3);
-  margin-top: -40px;
+  margin-top: -10px;
+  accent-color: var(--white);
+  border: 12px solid var(--black);
+  -o-border-image: url(../Icons/canvasbox.png) 1% round;
+     border-image: url(../Icons/canvasbox.png) 1% round;
 }
 
 .colors .option {
@@ -122,10 +130,9 @@ section {
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
-  box-shadow: 2px 2px 2px 1px rgba(12, 22, 89, 0.3);
   width: 100%;
   aspect-ratio: 1/1;
-  margin: 0;
+  margin: 1px;
   position: relative;
 }
 
@@ -213,6 +220,7 @@ section {
 .buttons .clear-canvas {
   color: var(--black);
   border: 1px solid var(--black);
+  margin-bottom: 20px;
 }
 .buttons .clear-canvas:hover {
   background-color: var(--off-white);
@@ -222,7 +230,8 @@ section {
 
 .sidemenu {
   background: var(--primary-color-dark);
-  background-image: linear-gradient(to bottom, var(--primary-color-light), var(--footer-color));
+  background-image: linear-gradient(to bottom, var(--primary-color-bright), #5863a8);
+  box-shadow: var(--primary-color-bright) 0px 4px 30px -12px inset, var(--primary-color-bright) 0px 12px 36px -18px inset;
   display: flex;
   flex-direction: row;
   width: 210px;
@@ -231,22 +240,31 @@ section {
   max-width: 1050px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  border: 10px solid var(--black);
+  -o-border-image: url(../Icons/canvasbox.png) 1% round;
+     border-image: url(../Icons/canvasbox.png) 1% round;
 }
 
 .drawing-board {
+  margin-left: 10px;
   flex: 1;
   position: relative;
+  border: 10px solid var(--black);
+  -o-border-image: url(../Icons/canvasbox.png) 1% round;
+     border-image: url(../Icons/canvasbox.png) 1% round;
+  background-image: linear-gradient(to bottom, var(--primary-color-bright), #5863a8);
+  box-shadow: var(--black) 0px 4px 30px -12px inset, var(--black) 0px 12px 36px -18px inset;
 }
 .drawing-board p {
-  font-size: 180px;
+  font-size: 160px;
   color: var(--white);
   transform: scaleY(80%);
-  text-shadow: 4px 4px 3px var(--black);
+  text-shadow: 4px 4px 0px var(--primary-color-bright);
   text-align: start;
   pointer-events: none;
   position: absolute;
-  top: -30px;
-  left: 4px;
+  top: -20px;
+  left: 10px;
   width: 70%;
   z-index: 0;
   text-align: center;
@@ -257,12 +275,12 @@ section {
   font-size: 50px;
   color: var(--white);
   transform: scaleY(80%);
-  text-shadow: 4px 4px 3px var(--black);
-  text-align: end;
+  text-shadow: 4px 4px 0px var(--primary-color-bright);
+  text-align: start;
   pointer-events: none;
   position: absolute;
   top: 11%;
-  left: 59%;
+  left: 54%;
   width: 70%;
   z-index: 0;
   text-align: center;
