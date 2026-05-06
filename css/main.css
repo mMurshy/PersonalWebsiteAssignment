@@ -29,7 +29,7 @@ html {
   color: var(--primary-color-bright);
   background-size: 330px;
   padding-left: 66px;
-  transform: scaleY(33%);
+  transform: scaleY(40%);
   padding-right: 30px;
   box-shadow: 3px 8px 13px 1px #0c1659;
   background-image: url(../Icons/haresstampblue.png);
@@ -37,7 +37,8 @@ html {
   background-size: contain;
 }
 .topbar h1 {
-  font-size: 4vw;
+  font-size: 3vw;
+  padding-left: 2%;
 }
 
 .footer {
@@ -79,6 +80,7 @@ section {
 .tools-board {
   width: 210px;
   background: var(--primary-color-dark);
+  background-image: linear-gradient(to bottom, var(--primary-color-light), var(--footer-color));
 }
 
 .row .options {
@@ -216,6 +218,19 @@ section {
   background-color: var(--off-white);
   border: 1px solid --black;
   transition: all 0.3s ease;
+}
+
+.sidemenu {
+  background: var(--primary-color-dark);
+  background-image: linear-gradient(to bottom, var(--primary-color-light), var(--footer-color));
+  display: flex;
+  flex-direction: row;
+  width: 210px;
+  height: 555px;
+  padding: 10px;
+  max-width: 1050px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .drawing-board {
