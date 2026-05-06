@@ -47,10 +47,9 @@ html {
   justify-content: center;
   background-color: var(--primary-color-light);
   background-size: 1310px;
-  background-image: url(../Icons/pots.png), url(../Icons/gridbackground.png);
+  background-image: url(../Icons/pots.png), linear-gradient(to bottom, #5863a8, var(--primary-color-bright));
   background-repeat: no-repeat;
   background-size: 100%;
-  background-position: 0px -20px;
   color: var(--white);
   width: 100%;
   gap: 10px;
@@ -241,8 +240,8 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   border: 10px solid var(--black);
-  -o-border-image: url(../Icons/canvasbox.png) 1% round;
-     border-image: url(../Icons/canvasbox.png) 1% round;
+  -o-border-image: url(../Icons/canvasbox3.png) 1% round;
+     border-image: url(../Icons/canvasbox3.png) 1% round;
 }
 
 .drawing-board {
@@ -250,8 +249,8 @@ section {
   flex: 1;
   position: relative;
   border: 10px solid var(--black);
-  -o-border-image: url(../Icons/canvasbox.png) 1% round;
-     border-image: url(../Icons/canvasbox.png) 1% round;
+  -o-border-image: url(../Icons/canvasbox2.png) 1% round;
+     border-image: url(../Icons/canvasbox2.png) 1% round;
   background-image: linear-gradient(to bottom, var(--primary-color-bright), #5863a8);
   box-shadow: var(--black) 0px 4px 30px -12px inset, var(--black) 0px 12px 36px -18px inset;
 }
@@ -279,7 +278,7 @@ section {
   text-align: start;
   pointer-events: none;
   position: absolute;
-  top: 11%;
+  top: 10.5%;
   left: 54%;
   width: 70%;
   z-index: 0;
