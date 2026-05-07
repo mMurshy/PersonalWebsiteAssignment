@@ -28,6 +28,7 @@ html {
 /* Default styles apply to screens less tn 600px wide */
 
 .topbar {
+    grid-area: topbar;
     background-color: var(--white);
     color: var(--primary-color-bright);
     background-size: 330px;
@@ -38,51 +39,70 @@ html {
     background-image: url(../Icons/haresstampblue.png);
     background-repeat: no-repeat;
     background-size: contain;
+    margin-top: -0.1em;
 
     h1 {
         font-size: 3vw;
         padding-left: 2%;
+        margin: 0;
     }
 }
 
    .footer{
+    grid-area: footer;
      list-style: none;
      font-size: 30px;
-      justify-content: center;
     background-color: var(--primary-color-light);
-    background-size: 1310px;
+    
     background-image: url(../Icons/pots.png), linear-gradient(to bottom, #5863a8, var(--primary-color-bright));
     background-repeat: no-repeat;
-    background-size: 100%;
-    color: var(--white);
     width: 100%;
-    gap: 10px;
-    padding: 10px;
+    
+    color: var(--white);
+   
+    margin-top: 3%;
     
     
     }
 
 body{
-
     background-image: url(../Icons/gridbackground.png);
     background-size: 100% 100%;
+    display: grid;
+    gap: 10px;
+    grid-template-areas:
+        "topbar topbar"
+        "tools drawing"
+        "sidemenu carousel"
+        "footer footer";
+    grid-template-columns: 210px 1fr;
     font-family: normal;
-}
-.container{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    padding: 10px;
-    max-width: 1050px;
+
+    @media (width >= 1300px) {
+        grid-template-areas:
+            "topbar topbar topbar topbar"
+            "tools drawing carousel sidemenu"
+            "footer footer footer footer";
+
+        grid-template-columns: 210px 1fr 1fr 210px;
+    }
+
 }
 
 section{
     background: var(--primary-color-bright);
     border-radius: 0px;
     box-shadow: 14px 8px 14px 1px rgb(12 22 89 / 0.3);
-    margin-top: -40px;
+    // margin-top: -40px;
 }
+
+.tools-board,
+.drawing-board {
+    cursor: url(../Icons/vase.png), pointer;
+}
+
 .tools-board{
+    grid-area: tools;
     width: 210px;
     background: var(--primary-color-dark);
     background-image: linear-gradient(to bottom, var(--primary-color-bright), #5863a8);
@@ -92,7 +112,6 @@ section{
 }
 
 .row .options{
-    
     list-style: none;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -218,24 +237,45 @@ border-color: #111111;
 }
 
 .sidemenu {
+    grid-area: sidemenu;
     background: var(--primary-color-dark);
      background-image: linear-gradient(to bottom, var(--primary-color-bright), #5863a8);
      box-shadow: var(--primary-color-bright) 0px 4px 30px -12px inset, var(--primary-color-bright) 0px 12px 36px -18px inset;
-   display: flex;
-  flex-direction: row;
-   width: 210px;
-    height: 555px;
-    padding: 10px;
-    max-width: 1050px;
+    width: 210px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     border: 10px solid var(--black);
     border-image: url(../Icons/canvasbox3.png) 1% round;
+    color: var(--white);
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    margin: 0px;
+    justify-content: center;
+    text-align: center;
+
+    
+}
+
+.carousel {
+    grid-area: carousel;
+    background-color: var(--primary-color-dark);
+    // height: 800px;
+    // width: 800px;
+    background-image: url(../Icons/haresstampblue.png);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    box-shadow: var(--primary-color-bright) 0px 4px 30px -12px inset, var(--primary-color-bright) 0px 12px 36px -18px inset;
+    border: 10px solid var(--black);
+    border-image: url(../Icons/canvasbox3.png) 1% round;
+    color: var(--white);
+    font-size: 25px;
+    text-align: center;
     
 }
 
 .drawing-board{
-    margin-left: 10px;
+    grid-area: drawing;
     flex: 1;
     position: relative;
      border: 10px solid var(--black);
@@ -244,36 +284,29 @@ border-color: #111111;
     box-shadow: var(--black) 0px 4px 30px -12px inset, var(--black) 0px 12px 36px -18px inset;
 
     p {
-        font-size: 160px;
+        // Uses the minimum size of either 160px or 15% of the screen width minus 250px
+        // We get the 250px from the width of the toolbar, .container padding, and body margin added together
+        // Those values don't change as the screen resizes, so we want to match the size of the text inside of
+        // our .drawing-board area which DOES flex with the screen size. 
+        font-size: min(10vw, 160px);
         color: var(--white);
         transform: scaleY(80%);
         text-shadow: 4px 4px 0px var(--primary-color-bright);
         text-align: start;
         pointer-events: none;
         position: absolute;
-        top: -20px;
-        left: 10px;
-        width: 70%;
+        // top: -20px;
+        // left: 10px;
+        width: 100%;
         z-index: 0;
         text-align: center;
         margin: 0;
-        line-height: 1;
-    } 
-  p2 {
-        font-size: 50px;
-        color: var(--white);
-        transform: scaleY(80%);
-        text-shadow: 4px 4px 0px var(--primary-color-bright);
-        text-align: start;
-        pointer-events: none;
-        position: absolute;
-        top: 10.5%;
-        left: 54%;
-        width: 70%;
-        z-index: 0;
-        text-align: center;
-        margin: 0;
-        line-height: 1;
+        line-height: 0.7;
+
+        span {
+            font-size: 0.3125em;
+        } 
+
     } 
 
     canvas{
