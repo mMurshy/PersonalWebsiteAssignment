@@ -35,8 +35,8 @@ html {
     padding-left: 25px;
     transform: scaleY(70%);
     padding-right: 30px;
-    box-shadow: 3px 8px 13px 1px #0c1659;
-    background-image: url(../Icons/haresstampblue.png);
+
+    background-image: url(../Icons/lunulalogo-spring.png);
     background-repeat: no-repeat;
     background-size: contain;
     margin-top: -0.1em;
@@ -53,13 +53,10 @@ html {
      list-style: none;
      font-size: 30px;
     background-color: var(--primary-color-light);
-    
     background-image: url(../Icons/pots.png), linear-gradient(to bottom, #5863a8, var(--primary-color-bright));
     background-repeat: no-repeat;
     width: 100%;
-    
     color: var(--white);
-   
     margin-top: 3%;
     
     
@@ -256,23 +253,99 @@ border-color: #111111;
     
 }
 
+// .carousel {
+//     grid-area: carousel;
+//     background-color: var(--primary-color-dark);
+//     background-image: url(../Icons/haresstampblue.png);
+//     background-size: contain;
+//     background-position: center center;
+//     background-repeat: no-repeat;
+//     box-shadow: var(--primary-color-bright) 0px 4px 30px -12px inset, var(--primary-color-bright) 0px 12px 36px -18px inset;
+//     border: 10px solid var(--black);
+//     border-image: url(../Icons/canvasbox2.png) 1% round;
+//     color: var(--white);
+//     font-size: 25px;
+//     text-align: center;
+// }
 .carousel {
     grid-area: carousel;
     background-color: var(--primary-color-dark);
-    // height: 800px;
-    // width: 800px;
     background-image: url(../Icons/haresstampblue.png);
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
     box-shadow: var(--primary-color-bright) 0px 4px 30px -12px inset, var(--primary-color-bright) 0px 12px 36px -18px inset;
     border: 10px solid var(--black);
-    border-image: url(../Icons/canvasbox3.png) 1% round;
+    border-image: url(../Icons/canvasbox2.png) 1% round;
     color: var(--white);
     font-size: 25px;
     text-align: center;
-    
 }
+
+.carousel > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slide {
+  inset: 0;
+  opacity: 0;
+  transition: 200ms opacity ease-in-out;
+  transition-delay: 200ms;
+}
+
+.slide > img {
+    grid-area: carousel;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide[data-active] {
+  opacity: 1;
+  z-index: 1;
+  transition-delay: 0ms;
+}
+
+.carousel-button {
+     grid-area: carousel;
+  position: absolute;
+  z-index: 2;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  transform: translateY(-50%);
+  cursor: pointer;
+      box-shadow: var(--primary-color-bright) 0px 4px 30px -12px inset, var(--primary-color-bright) 0px 12px 36px -18px inset;
+    border: 4px solid var(--black);
+    border-image: url(../Icons/canvasbox2.png) 1% round;
+  padding: 0 .5rem;
+  background-color: #ffffff00
+}
+
+.carousel-button:hover,
+.carousel-button:focus {
+  color: white;
+  background-color: rgba(0, 0, 0, .2);
+}
+
+.carousel-button:focus {
+  outline: 1px solid black;
+}
+
+.carousel-button.prev {
+     grid-area: carousel;
+  position: relative;
+}
+
+.carousel-button.next {
+     grid-area: carousel;
+  position: relative;
+}
+
+//end .carousel info
 
 .drawing-board{
     grid-area: drawing;
@@ -289,9 +362,9 @@ border-color: #111111;
         // Those values don't change as the screen resizes, so we want to match the size of the text inside of
         // our .drawing-board area which DOES flex with the screen size. 
         font-size: min(10vw, 160px);
-        color: var(--white);
+        color:#02061800;
         transform: scaleY(80%);
-        text-shadow: 4px 4px 0px var(--primary-color-bright);
+
         text-align: start;
         pointer-events: none;
         position: absolute;
@@ -300,6 +373,9 @@ border-color: #111111;
         text-align: center;
         margin: 0;
         line-height: 0.7;
+        background-image: url(../Icons/lunulaart.png);
+        background-size: contain;
+        background-repeat: no-repeat;
 
         span {
             font-size: 0.3125em;
