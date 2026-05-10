@@ -71,12 +71,6 @@ body {
   }
 }
 
-section {
-  background: var(--primary-color-bright);
-  border-radius: 0px;
-  box-shadow: 14px 8px 14px 1px rgba(12, 22, 89, 0.3);
-}
-
 .tools-board,
 .drawing-board {
   cursor: url(../Icons/paintbrushicon.png), pointer;
@@ -88,8 +82,8 @@ section {
   background: var(--primary-color-dark);
   background-image: linear-gradient(to bottom, var(--primary-color-bright), #5863a8);
   border: 10px solid var(--black);
-  -o-border-image: url(../Icons/canvasbox.png) 1% round;
-     border-image: url(../Icons/canvasbox.png) 1% round;
+  -o-border-image: url(../Icons/canvasbox1.png) 1% round;
+     border-image: url(../Icons/canvasbox1.png) 1% round;
   box-shadow: var(--primary-color-bright) 0px 4px 30px -12px inset, var(--primary-color-bright) 0px 12px 36px -18px inset;
 }
 
