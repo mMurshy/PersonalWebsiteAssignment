@@ -229,21 +229,18 @@ body {
 
 .sidemenu {
   grid-area: sidemenu;
+  width: 210px;
   background: var(--primary-color-dark);
   background-image: linear-gradient(to bottom, var(--primary-color-bright), #5863a8);
-  box-shadow: var(--primary-color-bright) 0px 4px 30px -12px inset, var(--primary-color-bright) 0px 12px 36px -18px inset;
-  width: 210px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   border: 10px solid var(--black);
-  -o-border-image: url(../Icons/canvasbox3.png) 1% round;
-     border-image: url(../Icons/canvasbox3.png) 1% round;
-  color: var(--white);
+  -o-border-image: url(../Icons/canvasbox1.png) 1% round;
+     border-image: url(../Icons/canvasbox1.png) 1% round;
+  box-shadow: var(--primary-color-bright) 0px 4px 30px -12px inset, var(--primary-color-bright) 0px 12px 36px -18px inset;
+  list-style: none;
+  display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 20px;
   margin: 0px;
-  justify-content: center;
-  text-align: center;
 }
 
 .carousel {
