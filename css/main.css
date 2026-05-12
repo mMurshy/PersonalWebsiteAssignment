@@ -242,6 +242,13 @@ body {
   padding: 20px;
   margin: 0px;
 }
+.sidemenu p {
+  font-size: 2vw;
+  color: var(--white);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
 
 .carousel {
   grid-area: carousel;
@@ -295,22 +302,7 @@ body {
   font-size: 2rem;
   transform: translateY(-50%);
   cursor: pointer;
-  box-shadow: var(--primary-color-bright) 0px 4px 30px -12px inset, var(--primary-color-bright) 0px 12px 36px -18px inset;
-  border: 4px solid var(--black);
-  -o-border-image: url(../Icons/canvasbox2.png) 1% round;
-     border-image: url(../Icons/canvasbox2.png) 1% round;
   padding: 0 0.5rem;
-  background-color: rgba(255, 255, 255, 0);
-}
-
-.carousel-button:hover,
-.carousel-button:focus {
-  color: white;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-.carousel-button:focus {
-  outline: 1px solid black;
 }
 
 .carousel-button.prev {
