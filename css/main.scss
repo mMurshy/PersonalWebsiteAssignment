@@ -299,6 +299,14 @@ border-color: #111111;
   margin: 0;
   padding: 0;
   list-style: none;
+
+
+  // @Jack: Making the list of slides a grid with a single area so you can stack them all
+  // into the same visual space. This is better than using position: absolute; because the
+  // carousel area will automatically size itself to the largest of your slides. 
+  // Less math this way, which I know will disappoint you, but it's easier. 
+  display: grid;
+  grid-template-areas: "carousel-display";
 }
 
 .slide {
@@ -308,15 +316,20 @@ border-color: #111111;
   transition: 200ms opacity ease-in-out;
   transition-delay: 200ms;
 
+  // @Jack: Putting all slides in the same grid area to stack them on top of each other on the z-axis,
+  // rather than stacking on top of each other on the y-axis.
+  grid-area: carousel-display;
 }
 
 .slide > img {
-    grid-area: carousel;
     justify-content: center;
     position: relative;
     width: 100%;
     height: 100%;
-    
+
+    // @Jack: Adding this maintains the image's original proportions while displaying it as large as
+    // possible in the available container without cropping any of the image.
+    object-fit: contain;
 }
 
 .slide[data-active] {
@@ -327,7 +340,6 @@ border-color: #111111;
 }
 
 .carousel-button {
-     grid-area: carousel;
   position: absolute;
   z-index: 2;
   background: none;
@@ -340,12 +352,10 @@ border-color: #111111;
 
 
 .carousel-button.prev {
-     grid-area: carousel;
   position: relative;
 }
 
 .carousel-button.next {
-     grid-area: carousel;
   position: relative;
 }
 
