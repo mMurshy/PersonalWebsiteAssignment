@@ -49,6 +49,7 @@ html {
 }
 
    .footer{
+    position: relative;
     grid-area: footer;
      font-size: 30px;
     background-color: var(--primary-color-light);
@@ -61,14 +62,16 @@ html {
     ul {
 
     list-style: none;
+    color: white;
     
     }
 
     img {
         width: 20px;
         height: 20px;
+        color: var(--white);
     }
-    ul, a:hover, a:active, a:visited { color: white; }
+    ul, a:hover, a:active, a:visited { color: var(--white); }
 
     
     }
@@ -256,7 +259,7 @@ body{
     box-shadow: var(--primary-color-bright) 0px 4px 30px -12px inset, var(--primary-color-bright) 0px 12px 36px -18px inset;
   
      p {
-        font-size: 2vw;
+        font-size: 200%;
         margin-top: 10px;
         color: var(--white);
         text-align: center;
@@ -322,19 +325,19 @@ body{
   // carousel area will automatically size itself to the largest of your slides. 
   // Less math this way, which I know will disappoint you, but it's easier. 
   display: grid;
-  grid-template-areas: "carousel-display";
+  grid-template-areas: "carousel-image-area";
 }
 
 .slide {
-    grid-area: carousel;
   inset: 0;
   opacity: 0;
   transition: 200ms opacity ease-in-out;
   transition-delay: 200ms;
+  width: 100%;
 
   // @Jack: Putting all slides in the same grid area to stack them on top of each other on the z-axis,
   // rather than stacking on top of each other on the y-axis.
-  grid-area: carousel-display;
+  grid-area: carousel-image-area;
 }
 
 .slide > img {
@@ -342,14 +345,14 @@ body{
     position: relative;
     width: 100%;
     height: 100%;
+    max-height: 600px;
 
     // @Jack: Adding this maintains the image's original proportions while displaying it as large as
     // possible in the available container without cropping any of the image.
-    object-fit:fill;
+    object-fit: contain;
 }
 
 .slide[data-active] {
-    grid-area: carousel;
   opacity: 1;
   z-index: 1;
   transition-delay: 0ms;
