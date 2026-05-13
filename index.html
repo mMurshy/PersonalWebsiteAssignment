@@ -85,22 +85,24 @@
     <p>Commission Guide</p>
   </section>
 
-  <section aria-label="Newest Photos">
-    <div class="carousel" data-carousel>
-      <button class="carousel-button prev" data-carousel-button="prev"><img src="Icons/arrowLeft.png"></button>
-      <button class="carousel-button next" data-carousel-button="next"><img src="Icons/arrowRight.png"></button>
-      <ul data-slides>
-        <li class="slide" data-active>
-          <img src="Icons/haresstampblue.png">
-        </li>
-        <li class="slide">
-          <img src="icons/useful.png">
-        </li>
-        <li class="slide">
-          <img src="icons/lunulalogo-spring.png">
-        </li>
-      </ul>
-    </div>
+  <!-- @Jack: Combined your section with the "Newest Photos" aria-label and your div.carousel -->
+  <!-- The way you had it before made it so your CSS grid areas were accidentally working correctly -->
+  <!-- for this area. Your section didn't have the grid-area: carousel; applied to it so it filled -->
+  <!-- the leftover space. -->
+  <section class="carousel" data-carousel aria-label="Newest Photos">
+    <button class="carousel-button prev" data-carousel-button="prev"><img src="Icons/arrowLeft.png"></button>
+    <button class="carousel-button next" data-carousel-button="next"><img src="Icons/arrowRight.png"></button>
+    <ul data-slides>
+      <li class="slide" data-active>
+        <img src="Icons/haresstampblue.png">
+      </li>
+      <li class="slide">
+        <img src="icons/useful.png">
+      </li>
+      <li class="slide">
+        <img src="icons/lunulalogo-spring.png">
+      </li>
+    </ul>
   </section>
 
   <section class="footer">
