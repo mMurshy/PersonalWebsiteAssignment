@@ -50,7 +50,6 @@ html {
 
    .footer{
     grid-area: footer;
-     list-style: none;
      font-size: 30px;
     background-color: var(--primary-color-light);
     background-image: url(../Icons/pots.png), linear-gradient(to bottom, #5863a8, var(--primary-color-bright));
@@ -58,7 +57,19 @@ html {
     width: 100%;
     color: var(--white);
     margin-top: 3%;
+
+    ul {
+
+    list-style: none;
     
+    }
+
+    img {
+        width: 20px;
+        height: 20px;
+    }
+    ul, a:hover, a:active, a:visited { color: white; }
+
     
     }
 
@@ -193,8 +204,13 @@ body{
     border: 3px solid #edeff8;
     transform: translate(-50%, -50%);
 }
-.colors .option:first-child.selected::before{
-border-color: #111111;
+
+
+
+.colors .option:is(:hover, .active){
+ border-radius: inherit;
+    border: 3px solid #edeff87c;
+    
 }
 .option #color-picker{
     opacity: 0;
@@ -215,14 +231,17 @@ border-color: #111111;
     }
 
     .clear-canvas {
-        color: var(--black);
-        border: 1px solid var(--black);
+        color: var(--white);
         margin-bottom: 20px;
+        background-image: url(../Icons/clearbuttonbox.png);
+        background-size:contain;
+        background-repeat: no-repeat;
+        
 
         &:hover{
-            background-color: var(--off-white);
-            border: 1px solid --black;
-            transition: all 0.3s ease;
+        
+            border: 1px solid var(--white);
+            
         }
     }
 }
@@ -236,33 +255,33 @@ border-color: #111111;
     border-image: url(../Icons/canvasbox1.png) 1% round;
     box-shadow: var(--primary-color-bright) 0px 4px 30px -12px inset, var(--primary-color-bright) 0px 12px 36px -18px inset;
   
-
-    .sidebuttons {
-
-              width: 100%;
-        
-        padding: 10px 0;
-        font-size: 0.9rem;
-        background: none;
-        margin-left: 30px;
-        cursor: pointer;
-        list-style: none;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        padding: 20px;
-         margin: 0px;
-    }
-
-    }
-    
-
-    p {
+     p {
         font-size: 2vw;
+        margin-top: 10px;
         color: var(--white);
         text-align: center;
-        display: flex;
-        justify-content: center;
+        cursor: default;
+        justify-content:start;
     }
+
+    .sidebuttons {
+        
+        padding: 10px 12px;
+        font-size: 0.9rem;
+        background: none;
+        cursor: pointer;
+        list-style: none;
+        grid-template-columns: 1fr 1fr;
+        margin: 0px;
+       
+    }
+
+    .sidebuttons:hover {
+            cursor: pointer;
+  filter:brightness(120%);
+}
+    }
+    
 
 // .carousel {
 //     grid-area: carousel;
@@ -280,13 +299,10 @@ border-color: #111111;
 // }
 .carousel {
     grid-area: carousel;
-    
+
     height:max-content;
-    background-color: var(--primary-color-dark);
-    background-image: url(../Icons/haresstampblue.png);
-    background-size: contain;
-    background-position: center center;
-    background-repeat: no-repeat;
+       background: var(--primary-color-dark);
+    background-image: linear-gradient(to bottom, var(--primary-color-bright), #5863a8);
     box-shadow: var(--primary-color-bright) 0px 4px 30px -12px inset, var(--primary-color-bright) 0px 12px 36px -18px inset;
     border: 10px solid var(--black);
     border-image: url(../Icons/canvasbox2.png) 1% round;
@@ -329,7 +345,7 @@ border-color: #111111;
 
     // @Jack: Adding this maintains the image's original proportions while displaying it as large as
     // possible in the available container without cropping any of the image.
-    object-fit: contain;
+    object-fit:fill;
 }
 
 .slide[data-active] {
