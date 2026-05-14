@@ -42,7 +42,7 @@ html {
     margin-top: -0.1em;
 
     h1 {
-        font-size: 3vw;
+        font-size: 1.5vw;
         padding-left: 2%;
         margin: 0;
     }
@@ -71,7 +71,7 @@ html {
         height: 20px;
         color: var(--white);
     }
-    ul, a:hover, a:active, a:visited { color: var(--white); }
+    ul, a, a:hover, a:active, a:visited { color: var(--white); }
 
     
     }
@@ -87,6 +87,8 @@ body{
         "sidemenu carousel"
         "footer footer";
     grid-template-columns: 210px 1fr;
+    grid-template-rows: 36px 1fr  auto;
+    min-height: 100vh;
     font-family: normal;
 
     @media (width >= 1300px) {
@@ -279,7 +281,7 @@ body{
        
     }
 
-    .sidebuttons:hover {
+    .sidebuttons a:hover {
             cursor: pointer;
   filter:brightness(120%);
 }

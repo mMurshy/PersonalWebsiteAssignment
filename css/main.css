@@ -38,7 +38,7 @@ html {
   margin-top: -0.1em;
 }
 .topbar h1 {
-  font-size: 3vw;
+  font-size: 1.5vw;
   padding-left: 2%;
   margin: 0;
 }
@@ -63,7 +63,7 @@ html {
   height: 20px;
   color: var(--white);
 }
-.footer ul, .footer a:hover, .footer a:active, .footer a:visited {
+.footer ul, .footer a, .footer a:hover, .footer a:active, .footer a:visited {
   color: var(--white);
 }
 
@@ -74,6 +74,8 @@ body {
   gap: 10px;
   grid-template-areas: "topbar topbar" "tools drawing" "sidemenu carousel" "footer footer";
   grid-template-columns: 210px 1fr;
+  grid-template-rows: 36px 1fr auto;
+  min-height: 100vh;
   font-family: normal;
 }
 @media (width >= 1300px) {
@@ -251,7 +253,7 @@ body {
   box-shadow: var(--primary-color-bright) 0px 4px 30px -12px inset, var(--primary-color-bright) 0px 12px 36px -18px inset;
 }
 .sidemenu p {
-  font-size: 200%;
+  font-size: 100%;
   margin-top: 10px;
   color: var(--white);
   text-align: center;
@@ -267,7 +269,7 @@ body {
   grid-template-columns: 1fr 1fr;
   margin: 0px;
 }
-.sidemenu .sidebuttons:hover {
+.sidemenu .sidebuttons a:hover {
   cursor: pointer;
   filter: brightness(120%);
 }
